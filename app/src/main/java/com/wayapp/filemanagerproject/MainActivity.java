@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     void show(File incomingFile){
         File[] newFiles = new File[incomingFile.listFiles().length + 1];
-        newFiles[0] = incomingFile;
+//        newFiles[0] = incomingFile;
 
         for(int i = 0; i < incomingFile.listFiles().length; i++){
             newFiles[i + 1] = incomingFile.listFiles()[i];
