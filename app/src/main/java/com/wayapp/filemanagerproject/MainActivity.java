@@ -1,22 +1,16 @@
 package com.wayapp.filemanagerproject;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.TextView;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
@@ -49,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     void show(File incomingFile){
         File[] newFiles = new File[incomingFile.listFiles().length + 1];
-//        newFiles[0] = incomingFile;
+        newFiles[0] = incomingFile;
 
         for(int i = 0; i < incomingFile.listFiles().length; i++){
             newFiles[i + 1] = incomingFile.listFiles()[i];
